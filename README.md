@@ -38,3 +38,7 @@ Remove all assets
 ```
 $ serverless remove
 ```
+
+## References
+
+https://dev.to/adnanrahic/a-crash-course-on-serverless-side-rendering-with-reactjs-nextjs-and-aws-lambda-13ed
