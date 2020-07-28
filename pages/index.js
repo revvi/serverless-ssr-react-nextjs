@@ -2,6 +2,7 @@
 import React from 'react'
 import Default from '../layouts/default'
 import axios from 'axios'
+import Link from 'next/link'
 const meta = { title: 'Index title', description: 'Index description' }
 
 class IndexPage extends React.Component {
@@ -13,9 +14,11 @@ class IndexPage extends React.Component {
     }
     this.fetchData = this.fetchData.bind(this)
   }
+
   async componentDidMount() {
     await this.fetchData()
   }
+
   async fetchData() {
     this.setState({ loading: true })
     const { data } = await axios.get(
@@ -26,6 +29,7 @@ class IndexPage extends React.Component {
       loading: false
     })
   }
+
   render() {
     return (
       <Default meta={meta}>
